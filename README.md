@@ -1,4 +1,4 @@
-## Other Approach: Robust Hough Lines
+## Approach: Robust Hough Lines
 
 ### Getting canny edge detection working
 The first step was to get the canny edge detection working. We implemented gaussian blur, but ended up using the scipy library to get the gaussian blur. Then we applied sobel filter to the image. The naive implementation was giving perfect result, but was taking long time to exicute. So we explored other inbuilt function for convolution where we found out that convolution function of, for example, ndimage.convolve is different then the fftconvolve from scipy. The fftconvolve function was giving better results.
